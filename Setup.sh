@@ -33,6 +33,8 @@ wget https://www.softether-download.com/files/softether/v4.27-9668-beta-2018.05.
 sleep 1
 tar -xzf soft*
 sleep 1
+rm -rf *.tar.gz
+sleep 1
 cd vpn*
 sleep 1
 make
@@ -90,4 +92,4 @@ chkconfig --add vpnserver
 echo -e "${LIGHTGREEN}Starting The VPN Service" 
 ../etc/init.d/vpnserver start
 echo -e "${PURPLE}Before We're Done, Would You Like To FIX Conflicting NAT Problems For Gaming?[Y/N]" read NAT
-sh FixNat.sh
+sh FixNAT.sh
